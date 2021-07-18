@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="sq_simulator">
+        <div class="sequra_simulator">
+            <div class="financed_amount">
+                <div class="sim_label">
+                    <label for="totalAmountInput">
+                        Importe a fraccionar
+                    </label>
+                </div>
+                <div class="total_amount">
+                    <input type="text" name="totalAmountInput" id="totalAmountInput" value="50">
+                </div>
+                <div class="amount_currency">
+                    Euros
+                </div>
+                <div class="total_amount_rangeCtrl">
+                    <input type="range" name="totalAmountRange" id="totalAmountRange" min="50" max="3000">
+                </div>
+            </div>
+            <div class="instalment_amount">
+                <div class="sim_label">
+                    <label for="totalInstalmentsAmount">
+                        Nº de cuotas
+                    </label>
+                </div>
+                <div class="total_amount">
+                    <input type="text" name="totalInstalmentsAmount" id="totalInstalmentsAmount" onchange="a()">
+                </div>
+                <div class="total_instalment_rangeCtrl">
+                    <input type="range" name="totalInstalmentsRange" id="totalInstalmentsRange" onchange="a()">
+                </div>
+            </div>
+            <div class="instalment_total">
+                <div class="sim_label">
+                    Pago fraccionado:
+                </div>
+                <div class="total" id="partpaymentTotal">
+                    <span id="instalmentAmountMonth">0</span> € durante <span id="instalmentCount"></span> meses con un coste de <span id="instalmentFee"></span> € por cuota. Total adeudado: <span id="grandTotal"></span> €.
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
